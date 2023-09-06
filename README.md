@@ -1,2 +1,2 @@
-# expert-octo-376-charlie
-A lab for a college course.
+# Oppenclicker
+This is Oppenclicker. It's a straightforward game made for a college lab.
