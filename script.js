@@ -1,9 +1,3 @@
-/* Version 0.0.2
-Added some functions that counts the time a user
-spends in total on the website in seconds*/
-
-
-
 $( document ).ready(function() {
   
   $('.img-fluid').click( 
