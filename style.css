@@ -1,3 +1,8 @@
+/* Version 0.0.2
+Added a boostrap class tags '.img-fluid' 
+  to fix image resizing and centering
+*/
+
 h1
 {
   text-align: center;
@@ -8,12 +13,17 @@ h1
 h2
 {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   color: rgb(255, 0, 0);
   -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
-
+#secondsWasted {
+  font-size: 40px;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
 
 #result {
   font-size: 40px;
@@ -22,15 +32,9 @@ h2
   -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
-.theNuke 
-{
-  text-align: center;
-  margin-left: 250px;
-  display: block;
-  margin-top: 40px;
-  margin-bottom: 100%;
-  max-width: 50%;
-  max-height: 10px;
+.img-fluid {
+ text-align: center;
+ height: 30%;
 }
 
 body {
@@ -40,3 +44,4 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
