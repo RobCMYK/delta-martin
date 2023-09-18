@@ -1,42 +1,43 @@
-h1
-{
-  text-align: center;
-  color: rgb(255, 0, 0);
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
-}
-
-h2
-{
-  text-align: center;
-  font-size: 40px;
-  color: rgb(255, 0, 0);
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
-}
-
-#secondsWasted {
-  font-size: 40px;
-  text-align: center;
-  color: rgb(255, 0, 0);
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
-}
-
-#result {
-  font-size: 40px;
-  text-align: center;
-  color: rgb(255, 0, 0);
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
-}
-
-.img-fluid {
- text-align: center;
- height: 30%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Space+Mono&display=swap');
+@import url('https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000');
 
 body {
-  background: url(https://c4.wallpaperflare.com/wallpaper/265/257/108/ai-art-mushroom-clouds-atomic-bomb-city-hd-wallpaper-preview.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  font-family: 'Dancing Script', 'Space Mono', cursive;
+  font-size: 30px;
+  background-image: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000");
+  }
+button {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  border-radius: 40px;
+  background: #ffffff;
+  padding: 20px;
+  }
+.words {
+  text-align: center;
+  color: greenyellow;
 }
-
+#userInput {
+  text-align: center;
+  color: greenyellow; 
+  }
+.textBox {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.btn {
+  text-align: center;
+  color: greenyellow;
+}
+/* #something {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+#spiritAnimal {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+#nameFact {
+  text-align: center;
+  color: rgb(255, 255, 255);
+} */

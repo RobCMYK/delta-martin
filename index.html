@@ -1,46 +1,46 @@
-<!-- Verson 0.0.2 
- HTML: Added a soundtrack to the website which loops
-and gives the user control over the sound.
-JS: Added some functions that counts the time a user
-spends in total on the website in seconds.
-CSS: Added a boostrap class tags '.img-fluid' 
-  to fix image resizing and centering
--->
-
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - martin-charlie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="styles/style.css">
+  <title>martin-delta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
-
 <body>
-
-<h1>WELCOME TO OPPENCLICKER: by Rob Martin!</h1>
-<h2>CLICK THE OPPENHEIMER TO DESTROY THE WORLD!</h2>
-
-<p id="secondsWasted"></p>
-
-<div id="result"></div>
-
-<br>
-<div class="img-fluid">
-  <img class="img-fluid mx-auto d-block" onclick="clickCounter()" src="https://th-thumbnailer.cdn-si-edu.com/XGlhnw9GYp4cd95ce5XAII_F5Kw=/1400x1050/filters:focal(850x489:851x490)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/ac/7f/ac7fc9ab-dd19-4beb-a907-0c87d5e0c3f3/oppenheimer-still1-62df17ed1c2fb-1.jpeg" alt="oppenheimer">
-</div>
-
-<div id="song" class="img-fluid">
-  <audio controls autoplay loop>
-    <source src="OppenclickerOST.mp3" type="audio/mpeg">
-  </audio>
-</div>
+<div class="words">
+  <strong>
+    <h1 class="words">Welcome!</h1>
+    <h2 class="words">Learn about your name and find your spirit animal!</h2>
+  </strong>
   
+</div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
-<script  src="script/script.js"></script>
+<div class="words">
+  <strong><h2 class="words">What's your name?</h2></strong>
+  
+</div>
+
+ <!-- <label for="fname">First name:</label> -->
+<div class="textBox">
+  <input type="text" id="userText">
+</div>
+ 
+<br>
+<!--<input type="submit" value="click this"> -->
+<div class="btn">
+  <button id="btnUserName" type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+  
+<h2 id="something" class="words"></h2>
+<h2 id="nameFact" class="words"></h2>
+<h2 id="spiritAnimal" class="words"></h2>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script src="script/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

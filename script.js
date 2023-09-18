@@ -1,76 +1,58 @@
-$( document ).ready(function() {
+$( document ).ready(function() { 
   
-  $('.img-fluid').click( 
-    function(
-    ){
-      console.log("position: ", $( '.img-fluid' ).position() );
-    }
-  ); 
-  });
+  console.log( "ready!" );
+  
+  //click the button
+  
+ $('#btnUserName').click(function() {
+  console.log("button clicked")
+  let userInput = $('#userText').val()
+  console.log(userInput);
+  let greeting;
+  greeting = "Hi, there, " + userInput + "! What's up?"
 
-function clickCounter() {
-  if (typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+1;
-  } else {
-      localStorage.clickcount = 1;
+  
+  $('#something').text(greeting);
+
+
+  const animal = ['Alligator', 'Bull', 'Crow', 'Dragon', 'Elephant', 'Fox', 'Goat', 'Hawk', 'Jaguar', 'Lizard', 'Monkey', 'Otter', 'Panda', 'Rabbit', 'Rhino', 'Snake', 'Turtle', 'Whale'];  
+  const randomElement = animal[Math.floor(Math.random() * animal.length)];  
+  console.log(randomElement);
+  let spiritAnimal;
+  spiritAnimal = "Your spirit animal is: " + randomElement + "!"
+  $('#spiritAnimal').text(spiritAnimal) ;
+
+  nameLength = getStringLength(userInput);
+  nameMsg = "The Length of your name is: ";
+  $('#nameFact').append(nameMsg + nameLength + " letters, "); 
+
+  function getStringLength(stringVal){
+    var stringLength = stringVal.length; 
+   return stringLength;   
   }
-    document.getElementById("result").innerHTML = "You am become death, destroyer of worlds " + localStorage.clickcount + " time(s).";
-}  else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-}
-}
-
-var timer;
-var timerStart;
-var timeSpentOnSite = getTimeSpentOnSite();
 
 
-function getTimeSpentOnSite(){
-    timeSpentOnSite = parseInt(localStorage.getItem('timeSpentOnSite'));
-    timeSpentOnSite = isNaN(timeSpentOnSite) ? 0 : timeSpentOnSite;
-    return timeSpentOnSite;
-}
+  vowelsInName = getVowels(userInput);
 
-function startCounting(){
-    timerStart = Date.now();
-    timer = setInterval(function(){
-        timeSpentOnSite = getTimeSpentOnSite()+(Date.now()-timerStart);
-        localStorage.setItem('timeSpentOnSite',timeSpentOnSite);
-        timerStart = parseInt(Date.now());
-        // Convert to seconds
-        console.log(parseInt(timeSpentOnSite/1000));
-    },1000);
-}
-startCounting();
+  $('#nameFact').append(vowelsInName + " vowel(s) & ");
 
-var stopCountingWhenWindowIsInactive = true; 
+  function getVowels(str) {
+    var v = str.match(/[aeiou]/gi);
+    return v === null ? 0 : v.length;
+  }
 
-if( stopCountingWhenWindowIsInactive ){
+  consInName = getConsonants(userInput);
+  
+  $('#nameFact').append(consInName + " consonant(s) !");
 
-    if( typeof document.hidden !== "undefined" ){
-        var hidden = "hidden", 
-        visibilityChange = "visibilitychange", 
-        visibilityState = "visibilityState";
-    }else if ( typeof document.msHidden !== "undefined" ){
-        var hidden = "msHidden", 
-        visibilityChange = "msvisibilitychange", 
-        visibilityState = "msVisibilityState";
-    }
-    var documentIsHidden = document[hidden];
+  function getConsonants(str) {
+    var c = str.match(/[bcdfghjklmnpqrstvwxyz]/gi);
+    return c === null ? 0 : c.length;
+  }
 
-    document.addEventListener(visibilityChange, function() {
-        if(documentIsHidden != document[hidden]) {
-            if( document[hidden] ){
-                // Window is inactive
-                clearInterval(timer);
-            }else{
-                // Window is active
-                startCounting();
-            }
-            documentIsHidden = document[hidden];
-        }
-    });
-}
+  
+});
 
-document.getElementById("secondsWasted").innerHTML = "YOU HAVE SPENT " + Math.round(timeSpentOnSite/1000) + "  SECONDS ON THIS PAGE!";
+});
+
+
